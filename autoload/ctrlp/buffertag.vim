@@ -83,7 +83,7 @@ let s:types = {
 	\ 'ocaml'      : '%socaml%socaml%scmMvtfCre',
   \ }
 
-cal map(s:types, 'printf(v:val, "--language-force=", " --", "-types=")')
+cal map(s:types, 'printf(v:val, "--language-force=", " --", "-kinds=")')
 
 if executable('jsctags')
 	cal extend(s:types, { 'javascript': { 'args': '-f -', 'bin': 'jsctags' } })
